@@ -21,19 +21,16 @@ cyberthreat_data = cyberthreat_data.dropna()
 cyberthreat_data = cyberthreat_data.drop_duplicates()
 
 # Assume you want to count the number of each attack type
-#attacks_by_type = attacks_data['Attack Type'].value_counts()
-
-# Example analysis: Distribution of threats by type
-#threats_distribution = threats_data['Type'].value_counts()
+cyberthreat_by_type = cyberthreat_data['Cyber Threat'].value_counts()
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Example visualization: Distribution of attack types
-#plt.figure(figsize=(8, 6))
-#sns.barplot(x=attacks_by_type.index, y=attacks_by_type.values)
-#plt.title('Distribution of Attack Types')
-#plt.xlabel('Attack Type')
-#plt.ylabel('Count')
-#plt.xticks(rotation=45)
-#plt.show()
+plt.figure(figsize=(8, 6))
+sns.barplot(x=cyberthreat_by_type.index, y=cyberthreat_by_type.values)
+plt.title('Distribution of Cyber Threat')
+plt.xlabel('Cyber Threat')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.show()
