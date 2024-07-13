@@ -1,36 +1,37 @@
+from matplotlib import pyplot as plt
 import pandas as pd
 
 # Load the datasets
 
-cyberthreat_data = pd.read_csv('/Users/markdevore/documents/git/codeucapstone/cyberthreat.csv')
+threats_data = pd.read_csv('/Users/markdevore/documents/git/codeucapstone/threats.csv')
 
 # Inspect data
 
-print(cyberthreat_data.head())
+print(threats_data.head())
 
 # Check data types and missing values
 
-print(cyberthreat_data.info())
+print(threats_data.info())
 
 # Handle missing values
 
-cyberthreat_data = cyberthreat_data.dropna()
+threats_data = threats_data.dropna()
 
 # Remove duplicates
 
-cyberthreat_data = cyberthreat_data.drop_duplicates()
+threats_data = threats_data.drop_duplicates()
 
 # Assume you want to count the number of each attack type
-cyberthreat_by_type = cyberthreat_data['Cyber Threat'].value_counts()
+threats_by_type = threats_data['Severity'].value_counts()
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Example visualization: Distribution of attack types
 plt.figure(figsize=(8, 6))
-sns.barplot(x=cyberthreat_by_type.index, y=cyberthreat_by_type.values)
-plt.title('Distribution of Cyber Threat')
-plt.xlabel('Cyber Threat')
+sns.barplot(x=threats_by_type.index, y=threats_by_type.values)
+plt.title('Distribution of Severity')
+plt.xlabel('Severity')
 plt.ylabel('Count')
 plt.xticks(rotation=45)
 plt.show()
