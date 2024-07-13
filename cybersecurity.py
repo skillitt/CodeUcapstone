@@ -20,16 +20,8 @@ attacks_data = attacks_data.dropna()
 attacks_data = attacks_data.drop_duplicates()
 #threats_data = threats_data.drop_duplicates()
 
-# Convert data types if needed
-# Example: Convert date columns to Type
-#attacks_data['Attack Type'] = pd.to_datetime(attacks_data['Attack Type'])
-
 # Assume you want to count the number of each attack type
 attacks_by_type = attacks_data['Attack Type'].value_counts()
-
-
-# Example analysis: Number of attacks over time
-#attacks_by_year = attacks_data.groupby(attacks_data['Date'].dt.year).size()
 
 # Example analysis: Distribution of threats by type
 #threats_distribution = threats_data['Type'].value_counts()
