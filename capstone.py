@@ -34,7 +34,6 @@ print(df.describe())
 
 # Visualization 2: Heatmap (correlation matrix of numerical features)
 plt.figure(figsize=(10, 8))
-# Only include numerical columns for correlation matrix
 numerical_columns = df.select_dtypes(include='number').columns
 correlation_matrix = df[numerical_columns].corr()
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
@@ -43,9 +42,7 @@ plt.show()
 
 # Visualization 3: Line Plot (trend of attacks over time)
 plt.figure(figsize=(10, 6))
-# Set 'Timestamp' as the index
 df.set_index('Timestamp', inplace=True)
-# Resample the data by month and count the number of attacks per month
 attacks_per_month = df.resample('M').size()
 sns.lineplot(x=attacks_per_month.index, y=attacks_per_month.values, marker='o')
 plt.xlabel('Date')
@@ -53,3 +50,25 @@ plt.ylabel('Number of Attacks')
 plt.title('Trend of Cybersecurity Attacks Over Time')
 plt.xticks(rotation=45)
 plt.show()
+
+# Visualization 4: 
+import seaborn as sns
+import matplotlib.pyplot as plt
+plt.figure(figsize=(12, 8))
+sns.boxplot(x='Day', y='Anomaly Scores', data=df, palette='viridis')
+plt.xlabel('Day')
+plt.ylabel('Anomaly Scores')
+plt.title('Distribution of Anomaly Scores by Day')
+plt.xticks(rotation=45)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
