@@ -13,10 +13,11 @@ print(df.head())
 # Ensure the 'Timestamp' column is correctly parsed as datetime
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 
-# Visualization 1: Bar Plot (number of attacks per year)
-plt.figure(figsize=(10, 6))
 # Extract year from the 'Timestamp' column
 df['Year'] = df['Timestamp'].dt.year
+
+# Visualization 1: Bar Plot (number of attacks per year)
+plt.figure(figsize=(10, 6))
 attacks_per_year = df['Year'].value_counts().sort_index()
 sns.barplot(x=attacks_per_year.index, y=attacks_per_year.values, palette='viridis')
 plt.xlabel('Year')
@@ -25,9 +26,17 @@ plt.title('Number of Cybersecurity Attacks per Year')
 plt.xticks(rotation=45)
 plt.show()
 
+# Check the dataframe structure and summary statistics
+print("DataFrame info:")
+print(df.info())
+print("DataFrame description:")
+print(df.describe())
+
 # Visualization 2: Heatmap (correlation matrix of numerical features)
 plt.figure(figsize=(10, 8))
-correlation_matrix = df.corr()
+# Only include numerical columns for correlation matrix
+numerical_columns = df.select_dtypes(include='number').columns
+correlation_matrix = df[numerical_columns].corr()
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
 plt.title('Correlation Matrix of Features')
 plt.show()
