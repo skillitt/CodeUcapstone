@@ -10,10 +10,14 @@ df = pd.read_csv(cleaned_file_path)
 print("Initial dataset:")
 print(df.head())
 
+# Ensure the 'Timestamp' column is correctly parsed as datetime
+df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+
 # Visualization 1: Bar Plot (number of attacks per year)
 plt.figure(figsize=(10, 6))
-df['year'] = pd.to_datetime(df['Year']).dt.year  # Replace 'date' with the correct column name
-attacks_per_year = df['year'].value_counts().sort_index()
+# Extract year from the 'Timestamp' column
+df['Year'] = df['Timestamp'].dt.year
+attacks_per_year = df['Year'].value_counts().sort_index()
 sns.barplot(x=attacks_per_year.index, y=attacks_per_year.values, palette='viridis')
 plt.xlabel('Year')
 plt.ylabel('Number of Attacks')
@@ -30,8 +34,9 @@ plt.show()
 
 # Visualization 3: Line Plot (trend of attacks over time)
 plt.figure(figsize=(10, 6))
-df['date'] = pd.to_datetime(df['date'])  # Replace 'date' with the correct column name
-df.set_index('date', inplace=True)
+# Set 'Timestamp' as the index
+df.set_index('Timestamp', inplace=True)
+# Resample the data by month and count the number of attacks per month
 attacks_per_month = df.resample('M').size()
 sns.lineplot(x=attacks_per_month.index, y=attacks_per_month.values, marker='o')
 plt.xlabel('Date')
