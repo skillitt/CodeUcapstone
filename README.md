@@ -10,6 +10,12 @@ To run this code and view the visualizations, follow these steps:
 
 ### Prerequisites
 
+The necessary dependencies are listed in `requirements.txt`. To install them, run:
+
+```bash
+pip install -r requirements.txt
+
+
 Ensure you have the following Python packages installed:
 - `pandas`
 - `matplotlib`
@@ -23,36 +29,33 @@ pip install pandas matplotlib seaborn
 Running the Code
 macOS/Linux
 Clone the repository:
-
-bash
-Copy code
 git clone https://github.com/skillitt/CodeUcapstone
 Navigate to the project directory:
+python capstone.py
 
-bash
-Copy code
-cd your-repository
-Run the Python script:
 
-bash
-Copy code
-python your_script.py
 Windows
 Clone the repository:
 
 cmd
-Copy code
 git clone https://github.com/skillitt/CodeUcapstone
 Navigate to the project directory:
-
-cmd
-Copy code
 cd your-repository
 Run the Python script:
-
-cmd
-Copy code
 python capstone.py
+
+#### INSTALL Dependencies
+
+Open the terminal in VS Code by going to View > Terminal.
+Ensure your virtual environment is activated. If you don't have a virtual environment, you can create one using:
+
+python -m venv venv
+On Windows:
+.\venv\Scripts\activate
+
+On macOS/Linux:
+source venv/bin/activate
+
 Visualizations
 Bar Plot: Shows the number of cybersecurity attacks per year.
 Heatmap: Displays the correlation matrix of numerical features in the dataset.
