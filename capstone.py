@@ -4,10 +4,6 @@ import seaborn as sns
 import os
 
 # Load the cleaned dataset
-#cleaned_file_path = '/Users/markdevore/Documents/git/CodeUcapstone/cleaned_cybersecurity_attacks.csv'
-#df = pd.read_csv(cleaned_file_path)
-
-# Load the cleaned dataset
 cleaned_file_path = os.path.join(os.path.dirname(__file__), 'cleaned_cybersecurity_attacks.csv')
 df = pd.read_csv(cleaned_file_path)
 
