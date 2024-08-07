@@ -46,6 +46,11 @@ Ensure you have the following Python packages installed:
 - `matplotlib`
 - `seaborn`
 
+#### Merge & Clean Data
+
+Run merge_datasets.py
+This will create the merge_datasets.csv
+
 
 #### Visualizations
 Bar Plot: Shows the number of cybersecurity attacks per year.
