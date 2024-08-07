@@ -37,6 +37,12 @@ Activate - source venv/bin/activate
 Install - pip install -r requirements.txt
 Deactivate - deactivate
 
+GitBash
+Create - python -m venv venv
+Activate - source venv/Scripts/activate
+Install - pip install -r requirements.txt
+Deactivate - deactivate
+
 Ensure you have the following Python packages installed:
 - `pandas`
 - `matplotlib`
