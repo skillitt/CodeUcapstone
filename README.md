@@ -10,22 +10,6 @@ To run this code and view the visualizations, follow these steps:
 
 ### Prerequisites
 
-The necessary dependencies are listed in `requirements.txt`. To install them, run:
-
-```bash
-pip install -r requirements.txt
-
-
-Ensure you have the following Python packages installed:
-- `pandas`
-- `matplotlib`
-- `seaborn`
-
-You can install them using pip:
-
-```bash
-pip install pandas matplotlib seaborn
-
 Running the Code
 macOS/Linux
 Clone the repository:
@@ -43,6 +27,24 @@ Navigate to the project directory:
 cd your-repository
 Run the Python script:
 python capstone.py
+
+The necessary dependencies are listed in `requirements.txt`. To install them, run:
+
+```bash
+pip install -r requirements.txt
+
+
+Ensure you have the following Python packages installed:
+- `pandas`
+- `matplotlib`
+- `seaborn`
+
+You can install them using pip:
+
+```bash
+pip install pandas matplotlib seaborn
+
+
 
 #### INSTALL Dependencies
 
