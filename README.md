@@ -27,8 +27,6 @@ cd your-repository
 Run the Python script:
 python capstone.py
 
-The necessary dependencies are listed in `requirements.txt`. To install them, run:
-
 #### Create virtual enviroment & Install Requirements
 
 Linux/Mac
