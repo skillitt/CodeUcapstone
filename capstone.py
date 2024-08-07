@@ -34,7 +34,7 @@ print(df.info())
 print("DataFrame description:")
 print(df.describe())
 
-# Visualization 2: Heatmap (correlation matrix of numerical features)
+# Visualization 1: Heatmap (correlation matrix of numerical features)
 plt.figure(figsize=(10, 8))
 numerical_columns = df.select_dtypes(include='number').columns
 correlation_matrix = df[numerical_columns].corr()
@@ -42,7 +42,7 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
 plt.title('Correlation Matrix of Features')
 plt.show()
 
-# Visualization 3: Line Plot (trend of attacks over time)
+# Visualization 2: Line Plot (trend of attacks over time)
 plt.figure(figsize=(10, 6))
 df.set_index('Timestamp', inplace=True)
 attacks_per_month = df.resample('M').size()
@@ -53,7 +53,7 @@ plt.title('Trend of Cybersecurity Attacks Over Time')
 plt.xticks(rotation=45)
 plt.show()
 
-# Visualization 4: 
+# Visualization 3: 
 import seaborn as sns
 import matplotlib.pyplot as plt
 plt.figure(figsize=(12, 8))
