@@ -4,6 +4,12 @@
 
 This project provides visualizations of a cleaned cybersecurity attacks dataset using Python. The visualizations include a bar plot of the number of attacks per year, a heatmap of the correlation matrix of numerical features, and a line plot showing the trend of attacks over time.
 
+#### ABOUT THIS CODE
+
+There are two parts to this code, you can just run the capstone.py
+or if you want you can delete the merged_datasets.csv and run the 
+merge_datasets.py and it will output the merged_datasets.csv
+
 ## Getting Started
 
 To run this code and view the visualizations, follow these steps:
@@ -27,7 +33,7 @@ cd your-repository
 Run the Python script:
 python capstone.py
 
-#### Create virtual enviroment & Install Requirements
+#### Create virtual enviroment & Install the Requirements
 
 Linux/Mac
 Create - python3 -m venv venv
