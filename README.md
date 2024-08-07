@@ -20,7 +20,6 @@ python capstone.py
 
 Windows
 Clone the repository:
-
 cmd
 git clone https://github.com/skillitt/CodeUcapstone
 Navigate to the project directory:
@@ -30,39 +29,26 @@ python capstone.py
 
 The necessary dependencies are listed in `requirements.txt`. To install them, run:
 
-```bash
-pip install -r requirements.txt
+#### Create virtual enviroment & Install Requirements
 
+Linux/Mac
+Create - python3 -m venv venv
+Activate - source venv/bin/activate
+Install - pip install -r requirements.txt
+Deactivate - deactivate
 
 Ensure you have the following Python packages installed:
 - `pandas`
 - `matplotlib`
 - `seaborn`
 
-You can install them using pip:
 
-```bash
-pip install pandas matplotlib seaborn
-
-
-
-#### INSTALL Dependencies
-
-Open the terminal in VS Code by going to View > Terminal.
-Ensure your virtual environment is activated. If you don't have a virtual environment, you can create one using:
-
-python -m venv venv
-On Windows:
-.\venv\Scripts\activate
-
-On macOS/Linux:
-source venv/bin/activate
-
-Visualizations
+#### Visualizations
 Bar Plot: Shows the number of cybersecurity attacks per year.
 Heatmap: Displays the correlation matrix of numerical features in the dataset.
 Line Plot: Illustrates the trend of cybersecurity attacks over time.
 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgements
@@ -71,3 +57,7 @@ Inspired by data visualization techniques and cybersecurity research.
 Datasets from kaggle
 https://www.kaggle.com/datasets/thedevastator/exploring-cybersecurity-risk-via-2022-cisa-vulne
 https://www.kaggle.com/datasets/teamincribo/cyber-security-attacks
+
+
+#### Run the code
+capstone.py
