@@ -4,7 +4,7 @@ import seaborn as sns
 import os
 
 # Load the cleaned dataset
-cleaned_file_path = os.path.join(os.path.dirname(__file__), 'cleaned_cybersecurity_attacks.csv')
+cleaned_file_path = os.path.join(os.path.dirname(__file__), 'merged_datasets.csv')
 df = pd.read_csv(cleaned_file_path)
 
 
